@@ -6,6 +6,8 @@ import Discounting from './components/Discount/Discounting';
 import Season from './components/Season/Season';
 import Present from './components/Present/Present';
 import Forum from './components/Forum/Forum';
+import Map from './components/Map/Map';
+import Footer from './components/Footer/Footer';
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
       <Season />
       <Present />
       <Forum />
+      {/* <Map /> */}
+      <Footer />
     </div>
   )
 }
