@@ -1,0 +1,22 @@
+.banner {
+    padding-top: 60px;
+
+    .banner_block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .banner_details_item1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+     .banner_details_item2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 36px;
+    }
+
+}

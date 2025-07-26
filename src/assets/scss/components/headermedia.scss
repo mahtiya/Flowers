@@ -1,0 +1,38 @@
+.header_media_social {
+    display: flex;
+    gap: 13px;
+}
+
+.header_social {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26.92px;
+    height: 26.92px;
+    background: rgb(149, 109, 132);
+}
+
+.header_media_num {
+    padding-top: 20px;
+    color: rgb(51, 51, 51);
+    font-family: Golos Text;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+}
+
+.header_media_favourite {
+    padding-top: 22px;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.header_media_currency {
+    color: rgb(130, 130, 130);
+    font-family: Golos Text;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 10px;
+}
