@@ -1,100 +1,107 @@
 .discounting {
     padding-top: 80px;
-}
 
-.discounting_list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 50px;
-
-    .discount_item {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #956D84;
-        width: 340px;
-        height: 600px;
-        margin-top: 20px;
+    .discount_title {
+        text-align: center;
+        color: rgb(51, 51, 51);
+        font-family: Golos Text;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 18px;
     }
-}
 
-.discount_title {
-    text-align: center;
-    color: rgb(51, 51, 51);
-    font-family: Golos Text;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 18px;
-}
+    .discunting_scroll_wrapper {
+        position: relative;
+        margin-top: 50px;
+    }
 
-.discount_img {
-    width: 334px;
-    background: #FBF9FA;
-    height: 366px;
-    object-fit: cover;
+    .discounting_list {
+        display: flex;
+        gap: 20px; // расстояние между карточками
+        overflow-x: auto; // горизонтальный скролл
+        scroll-behavior: smooth; // плавный скролл
+        padding-bottom: 20px;
 
-}
+        &::-webkit-scrollbar {
+            display: none; // скрываем скроллбар
+        }
 
-.discount_team {
-    display: flex;
-    gap: 50px;
-    padding: 20px 10px 0px 10px;
-    align-items: center;
+        .discount_item {
+            flex: 0 0 auto; // фиксированная ширина карточки
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #956D84;
+            width: 340px;
+            height: 600px;
+            background: #fff;
+        }
 
-}
+        .discount_img {
+            width: 100%;
+            height: 366px;
+            object-fit: cover;
+            background: #FBF9FA;
+        }
 
-.discount_name {
-    width: 180px;
-    color: #333333;
-    font-family: Golos Text;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 18px;
-}
+        .discount_team {
+            display: flex;
+            gap: 20px;
+            padding: 20px 10px 0 10px;
+            align-items: center;
+        }
 
-.discount_old {
-    width: 79px;
-    color: #BDBDBD;
-    font-family: GOlos Text;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 18px;
+        .discount_name {
+            color: #333333;
+            font-family: Golos Text;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 18px;
+        }
 
-}
+        .discounting_item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
 
-.discount_price {
-    color: #956D84;
-    white-space: nowrap;
-    width: 79px;
-    font-family: Golos Text;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 18px;
+            .discount_old {
+                color: #BDBDBD;
+                font-family: Golos Text;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 18px;
+            }
 
+            .discount_price {
+                color: #956D84;
+                font-family: Golos Text;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 18px;
+            }
+        }
 
-}
+        .discounting_btn {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
 
-.discounting_btn {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-}
+            .discount_sup {
+                color: #828282;
+                text-decoration: underline;
+                font-family: Golos Text;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 18px;
+                margin-top: 10px;
+            }
+        }
 
-
-.discount_sup {
-    color: #828282;
-    text-decoration: underline;
-    font-family: Golos Text;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    padding-top: 10px;
-}
-
-.discount_rating {
-    padding-left: 20px;
-    padding-top: 10px;
-    color: yellow;
+        .discount_rating {
+            padding-left: 20px;
+            padding-top: 10px;
+            color: yellow;
+        }
+    }
 }

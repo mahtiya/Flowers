@@ -60,7 +60,7 @@ export default function TopBar() {
                                 <img className='topbar_img' src={TopBarIcon1} alt="" />
                             </div>
                             <p className='topbar_suptitle'>
-                                <Link to="notes">Закладки</Link>
+                                <Link to="notes">О нас</Link>
                             </p>
                         </div>
                         <div className="topbar_item">

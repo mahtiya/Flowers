@@ -5,10 +5,19 @@
 .season_list {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding-top: 50px;
+    display: flex;
+    gap: 20px; // расстояние между карточками
+    overflow-x: auto; // горизонтальный скролл
+    scroll-behavior: smooth; // плавный скролл
+
+    &::-webkit-scrollbar {
+        display: none; // скрываем скроллбар
+    }
 
     .season_item {
+        flex: 0 0 auto; // фиксированная ширина карточки
         display: flex;
         flex-direction: column;
         align-items: center;

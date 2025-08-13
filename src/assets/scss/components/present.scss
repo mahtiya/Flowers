@@ -15,10 +15,20 @@
 .present_list {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 20px; // расстояние между карточками
+    overflow-x: auto; // горизонтальный скролл
+    scroll-behavior: smooth; // плавный скрол
+
+    &::-webkit-scrollbar {
+        display: none; // скрываем скроллбар
+    }
+
     padding-top: 50px;
 
     .present_item {
+        flex: 0 0 auto; // фиксированная ширина карточки
         display: flex;
         flex-direction: column;
         align-items: center;
