@@ -11,7 +11,7 @@ export default function Season() {
                 <ul className="season_list">
                     {flowers.map((item) => (
                         <li className="season_item" key={item.id}>
-                            <img src={SeasonImg} alt={item.name} className="season_img" />
+                            <img src={item.image} alt={item.name} className="season_img" />
                             <div className="season_pad">
                                 <p className="season_rating">
                                     {'★'.repeat(item.rating)}{'☆'.repeat(5 - item.rating)}

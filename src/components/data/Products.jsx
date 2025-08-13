@@ -1,16 +1,27 @@
+import Flower1 from './../../assets/images/flower1.png';
+import Flower from './../../assets/images/flower.png';
+import Flower3 from './../../assets/images/flower3.png';
+import Flower4 from './../../assets/images/flower4.png';
+import Flower5 from './../../assets/images/flower5.png';
+import Flower6 from './../../assets/images/flower6.png';
+import Flower7 from './../../assets/images/flower7.png';
+import Flower8 from './../../assets/images/flower8.png';
+
+
+
+
 const products = [
   {
     id: 1,
-    image: "",
+    image: Flower,
     name: "101 красная роза",
     price: 2280,
     oldPrice: 2380,
     rating: 4,
-
   },
   {
     id: 2,
-    image: "",
+    image: Flower1,
     name: "25 розовых роз",
     price: 1680,
     oldPrice: 2580,
@@ -19,7 +30,7 @@ const products = [
   },
   {
     id: 3,
-    image: "",
+    image: Flower3,
     name: "Влюблённость",
     price: 1270,
     oldPrice: 2840,
@@ -28,7 +39,7 @@ const products = [
   },
   {
     id: 4,
-    image: "",
+    image: Flower4,
     name: "Композиция для тебя",
     price: 1270,
     oldPrice: 2600,
@@ -37,7 +48,7 @@ const products = [
   },
   {
     id: 5,
-    image: "",
+    image: Flower5,
     name: "101 красная роза",
     price: 2280,
     oldPrice: 2380,
@@ -46,7 +57,7 @@ const products = [
   },
   {
     id: 6,
-    image: "",
+    image: Flower6,
     name: "25 розовых  роз",
     price: 1680,
     oldPrice: 2580,
@@ -55,7 +66,7 @@ const products = [
   },
   {
     id: 7,
-    image: "",
+    image: Flower7,
     name: "Влюблённость",
     price: 1270,
     oldPrice: 2840,
@@ -64,7 +75,7 @@ const products = [
   },
   {
     id: 8,
-    image: "",
+    image: Flower8,
     name: "Композиция для тебя",
     price: 1270,
     oldPrice: 2600,

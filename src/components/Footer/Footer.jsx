@@ -1,5 +1,5 @@
 import './../../assets/scss/components/footer.scss';
-import HeaderLogo from './../../assets/images/LogO.png';
+import HeaderLogo from './../../assets/images/Логотип.png';
 
 
 export default function Footer() {
@@ -47,9 +47,11 @@ export default function Footer() {
                             </ul>
                         </div>
 
-
                     </div>
+
                 </div>
+                <hr className='footer_hr' />
+                <p className='footer_designer'>2025 Мир цветов. Сайт разработан ...</p>
             </div>
         </footer>
     )

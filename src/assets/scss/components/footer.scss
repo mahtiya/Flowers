@@ -7,9 +7,18 @@
 }
 
 .footer_block {
-    padding: 40px 20px 0px 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.footer_designer {
+    padding-top: 20px;
+    color: rgba(255, 255, 255, 0.733);
+    font-family: Golos Text;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
 }
 
 .footer_team {
@@ -39,6 +48,13 @@
 }
 
 .footer_img {
-    width: 169px;
-    height: 169px;
+    background-color: none;
+    background-color: transparent;
+    width: 269px;
+    height: 269px;
+}
+
+.footer_hr {
+    height: 0px;
+    border: 1px solid rgb(149, 109, 132);
 }

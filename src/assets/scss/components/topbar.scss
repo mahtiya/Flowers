@@ -5,33 +5,62 @@
     display: flex;
     align-items: center;
 }
+
 .topbar_block {
     display: flex;
     justify-content: space-between;
     padding: 0px 20px 0px 20px;
 }
+
 .top_bar_items {
     display: flex;
     gap: 63px;
 }
+
 .topbar_items {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .topbar_item {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.topbar_suptitle {
+
+.topbar_suptitle a {
+    color: rgb(255, 255, 255);
+    font-family: Golos Text;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+
+    &:hover {
+        color: rgb(149, 109, 132);
+    }
+}
+
+
+.topbar_sup {
+    color: rgb(255, 255, 255);
+    font-family: Golos Text;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+
+}
+
+
+.topbar_lang {
     color: rgb(255, 255, 255);
     font-family: Golos Text;
     font-size: 16px;
     font-weight: 300;
     line-height: 18px;
 }
+
 .topbar_img {
     width: 26.04px;
     height: 16px;

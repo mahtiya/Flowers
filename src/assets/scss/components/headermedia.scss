@@ -1,5 +1,6 @@
 .header_media_social {
     display: flex;
+    justify-content: center;
     gap: 13px;
 }
 
@@ -23,6 +24,8 @@
 }
 
 .header_media_favourite {
+    display: flex;
+    justify-content: center;
     padding-top: 22px;
     display: flex;
     gap: 13px;

@@ -16,13 +16,21 @@ export default function Banner() {
                     </div>
                     <div className="banner_details">
                         <div className="banner_details_item1">
-                            <img src={Banner2} alt="" />
-                            <img src={Banner3} alt="" />
+                            <div>
+                                <img src={Banner2} alt="" />
+                            </div>
+                            <div>
+                                <img src={Banner3} alt="" />
+                            </div>
 
                         </div>
                         <div className="banner_details_item2">
-                            <img src={Banner4} alt="" />
-                            <img src={Banner5} alt="" />
+                            <div>
+                                <img src={Banner4} alt="" />
+                            </div>
+                            <div>
+                                <img src={Banner5} alt="" />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -14,26 +14,28 @@ export default function HeaderMedia() {
                 <div className="header_media_block">
                     <div className="header_media_social">
                         <div className="header_social">
-                            <img src={Twitter} alt="" />
+                            <a href="https://www.instagram.com/mirsvetov.kg.kyzylkiya?igsh=ZnVkaGxxbzBiOThl">
+                                <img src={Insta} alt="" />
+                            </a>
                         </div>
                         <div className="header_social">
-                            <img src={Insta} alt="" />
+                            <a href="https://t.me/mar_ziya">
+                                <img src={Teg} alt="" />
+                            </a>
                         </div>
                         <div className="header_social">
-                            <img src={Teg} alt="" />
-                        </div>
-                        <div className="header_social">
-                            <img src={facebook} alt="" />
+                            <a href=" https://www.facebook.com/mirsvetov.kg.kyzylkiya">
+                                <img src={facebook} alt="" />
+                            </a>
                         </div>
                     </div>
                     <div className="header_media_num">
-                        <p>+38 (067) 829 30 30</p>
+                        <p>+996 999 38 34 32</p>
                     </div>
                     <div className="header_media_favourite">
-                        
+
                         <img src={Heart} alt="" />
                         <img src={Cart} alt="" />
-                        <p className='header_media_currency'>₴ 1 520</p>
                     </div>
                 </div>
             </div>

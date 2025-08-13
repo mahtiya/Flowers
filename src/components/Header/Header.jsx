@@ -1,4 +1,4 @@
-import HeaderLogo from './../../assets/images/LogO.png';
+import HeaderLogo from './../../assets/images/Логотип.png';
 import HeaderSearch from './HeaderSearch/HeaderSearch';
 import './../../assets/scss/components/header.scss';
 import HeaderMedia from './HeaderMedia/HeaderMedia';
@@ -9,7 +9,7 @@ export default function Header() {
       <div className="container">
         <div className="header_block">
           <div className="header_img">
-            <img src={HeaderLogo} alt="" />
+            <img  className='header_img' src={HeaderLogo} alt="" />
           </div>
           <div className="header_team">
             <div className="head_search">
@@ -21,7 +21,6 @@ export default function Header() {
           </div>
           <div className="header_social_team">
             <HeaderMedia />
-
           </div>
         </div>
       </div>

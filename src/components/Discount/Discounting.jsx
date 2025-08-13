@@ -1,6 +1,5 @@
 import products from './../data/Products';
 import './../../assets/scss/components/discounting.scss';
-import Flower from './../../assets/images/flower.png';
 import Button from '../ui/Button';
 export default function Discounting() {
     return (
@@ -11,7 +10,7 @@ export default function Discounting() {
                     {products.map((product) => (
                         <li key={product.id} className="discount_item">
                             <div>
-                                <img className='discount_img' src={Flower} alt={product.name} />
+                                <img className='discount_img' src={product.image} alt={product.name} />
                             </div>
                             <p className="discount_rating">
                                 {'★'.repeat(product.rating)}{'☆'.repeat(5 - product.rating)}
