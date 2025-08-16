@@ -1,7 +1,7 @@
-.discounting {
-    padding-top: 80px;
+.view_page {
 
-    .discount_title {
+    .view_title {
+        padding-top: 60px;
         text-align: center;
         color: rgb(51, 51, 51);
         font-family: Golos Text;
@@ -10,15 +10,15 @@
         line-height: 18px;
     }
 
-
-    .view_all_btn {
+    .view_list {
         padding-top: 60px;
         display: flex;
-        justify-content: end;
-        margin-right: 30px;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
     }
 
-    .discount_item {
+    .view_item {
         display: flex;
         flex-direction: column;
         border: 1px solid #956D84;
@@ -27,26 +27,30 @@
         background: #fff;
     }
 
-    .discounting_list {
-        padding-top: 30px;
-    }
-
-
-    .discount_img {
-        width: 100%;
-        height: 366px;
-        object-fit: cover;
+    .view_img_wrap {
         background: #FBF9FA;
     }
 
-    .discount_team {
+    .view_img {
+        width: 100%;
+        height: 366px;
+        object-fit: cover;
+    }
+
+    .view_rating {
+        padding-left: 20px;
+        padding-top: 10px;
+        color: yellow;
+    }
+
+    .view_content {
         display: flex;
         justify-content: space-between;
         padding: 20px 20px 0 20px;
         align-items: center;
     }
 
-    .discount_name {
+    .view_name {
         color: #333333;
         font-family: Golos Text;
         font-size: 18px;
@@ -55,7 +59,9 @@
     }
 
 
-    .discount_old {
+
+
+    .view_old_price {
         color: #BDBDBD;
         font-family: Golos Text;
         font-weight: 300;
@@ -63,7 +69,7 @@
         line-height: 18px;
     }
 
-    .discount_price {
+    .view_price {
         color: #956D84;
         font-family: Golos Text;
         font-weight: 700;
@@ -72,14 +78,14 @@
     }
 }
 
-.discounting_btn {
+.view_actions {
     margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
 
-    .discount_sup {
+    .view_fast {
         color: #828282;
         text-decoration: underline;
         font-family: Golos Text;
@@ -88,10 +94,4 @@
         line-height: 18px;
         margin-top: 10px;
     }
-}
-
-.discount_rating {
-    padding-left: 20px;
-    padding-top: 10px;
-    color: yellow;
 }

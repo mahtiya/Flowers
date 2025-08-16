@@ -7,7 +7,7 @@ export default function HeaderList() {
         <div className="header_list_block">
           <ul className='header_list_ul'>
             <li className='header_list_item'>
-              <Link to="products">Каталог товаров</Link>
+              <Link to="view-all">Каталог товаров</Link>
             </li>
             <li className='header_list_item'>
               <Link to="forums">Форум</Link>

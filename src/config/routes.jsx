@@ -7,7 +7,6 @@ import Forums from '../modules/Forums/Forums'
 import Home from '../modules/Home/Home'
 import Information from '../modules/Information/Information'
 import News from '../modules/News/News'
-import Products from '../modules/Products/Products'
 import ViewAllPage from '../modules/ViewAllPage.jsx/ViewAllPage'
 import Notes from './../modules/Notes/Notes'
 
@@ -20,8 +19,8 @@ export const routes = () => {
         },
         {
             id: 2,
-            path: '/products',
-            element: <Products />
+            path: '/view-all',
+            element: <ViewAllPage />
         }, {
             id: 3,
             path: '/comments',
@@ -59,11 +58,5 @@ export const routes = () => {
             path: '/notes',
             element: <Notes />
         },
-
-        {
-            id: 11,
-            path: '/view-all',
-            element: <ViewAllPage />
-        }
     ]
 }
