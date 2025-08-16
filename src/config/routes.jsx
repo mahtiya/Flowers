@@ -8,6 +8,7 @@ import Home from '../modules/Home/Home'
 import Information from '../modules/Information/Information'
 import News from '../modules/News/News'
 import Products from '../modules/Products/Products'
+import ViewAllPage from '../modules/ViewAllPage.jsx/ViewAllPage'
 import Notes from './../modules/Notes/Notes'
 
 export const routes = () => {
@@ -58,5 +59,11 @@ export const routes = () => {
             path: '/notes',
             element: <Notes />
         },
+
+        {
+            id: 11,
+            path: '/view-all',
+            element: <ViewAllPage />
+        }
     ]
 }

@@ -1,17 +1,26 @@
-import products from './../data/Products';
 import './../../assets/scss/components/discounting.scss';
 import Button from '../ui/Button';
-import UseScroll from '../../Hooks/UseScroll';
+import Marquee from 'react-fast-marquee';
+import products from '../data/Product'
+import ViewBtn from '../ui/ViewBtn';
+
 export default function Discounting() {
-    const { scrollRef,  handleScroll } = UseScroll(3, 10);
-    const items = [...products, ...products, ...products];
     return (
         <section className='discounting'>
-            <div className="container">
-                <h5 className='discount_title'>Акции</h5>
-                <div className="discunting_scroll_wrapper">
-                    <ul className="discounting_list" ref={scrollRef} onScroll={handleScroll}>
-                        {items.map((product, index) => (
+            <h5 className='discount_title'>Акции</h5>
+
+            <div className="discunting_scroll_wrapper">
+                <div className="view_all_btn"><ViewBtn /></div>
+
+
+                <ul className="discounting_list" >
+                    <Marquee
+                        speed={100}
+                        className="present_list"
+                        gradient={false}
+                        pauseOnHover={false}
+                    >
+                        {products.map((product, index) => (
                             <li key={index} className="discount_item" >
                                 <div>
                                     <img className='discount_img' src={product.image} alt={product.name} />
@@ -36,8 +45,8 @@ export default function Discounting() {
                                 </div>
                             </li>
                         ))}
-                    </ul>
-                </div>
+                    </Marquee>
+                </ul>
             </div>
         </section>
     )

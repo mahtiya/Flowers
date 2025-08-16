@@ -2,18 +2,24 @@ import { flowers } from './../data/Seasons';
 import './../../assets/scss/components/season.scss';
 import SeasonImg from './../../assets/images/rose.png'
 import Button from '../ui/Button';
-import UseScroll from '../../Hooks/UseScroll';
+import Marquee from 'react-fast-marquee';
+import ViewBtn from '../ui/ViewBtn';
 
 export default function Season() {
-    const { scrollRef, handleScroll } = UseScroll(3, 10);
-    const items = [...flowers, ...flowers, ...flowers];
     return (
         <section className="season">
-            <div className="container">
-                <h6 className='season_title'>Сезонные</h6>
-                <div className="season_scroll_wrapper">
-                    <ul className="season_list" ref={scrollRef} onScroll={handleScroll}>
-                        {items.map((item) => (
+            <h6 className='season_title'>Сезонные</h6>
+            <div className="season_scroll_wrapper">
+                <div className="view_all_btn"><ViewBtn /></div>
+
+                <ul className="season_list">
+                    <Marquee
+                        speed={100}
+                        className="present_list"
+                        gradient={false}
+                        pauseOnHover={false}
+                    >
+                        {flowers.map((item) => (
                             <li className="season_item" key={item.id}>
                                 <img src={item.image} alt={item.name} className="season_img" />
                                 <div className="season_pad">
@@ -32,8 +38,9 @@ export default function Season() {
 
                             </li>
                         ))}
-                    </ul>
-                </div>
+                    </Marquee>
+                </ul>
+
             </div>
         </section>
     );

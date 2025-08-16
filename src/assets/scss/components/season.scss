@@ -3,21 +3,9 @@
 }
 
 .season_list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    padding-top: 50px;
-    display: flex;
-    gap: 20px; // расстояние между карточками
-    overflow-x: auto; // горизонтальный скролл
-    scroll-behavior: smooth; // плавный скролл
-
-    &::-webkit-scrollbar {
-        display: none; // скрываем скроллбар
-    }
+    padding-top: 20px;
 
     .season_item {
-        flex: 0 0 auto; // фиксированная ширина карточки
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -27,6 +15,13 @@
         margin-top: 20px;
     }
 }
+
+.view_all_btn {
+    padding-top: 60px;
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+} 
 
 .season_name {
     width: 220px;

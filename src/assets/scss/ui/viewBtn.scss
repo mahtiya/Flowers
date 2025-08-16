@@ -1,0 +1,24 @@
+.view_all {
+    width: 300px;
+    height: 73px;
+    opacity: 1;
+    border-radius: 7px;
+    font-family: Golos Text;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    background-color: #956D84;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 0px 0px 20px #956D84;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #bd5992;
+
+    }
+}
