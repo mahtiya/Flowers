@@ -1,5 +1,6 @@
 .map {
     padding-top: 70px;
+    position: relative;
 }
 
 .map_iframe {
@@ -15,4 +16,15 @@
     width: 380px;
     height: 508px;
     background-color: white;
+}
+
+.map_design_left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.design_left_img {
+    width: 152px;
+    height: 512px;
 }

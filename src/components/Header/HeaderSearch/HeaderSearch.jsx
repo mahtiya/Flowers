@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import './../../../assets/scss/components/headersearch.scss';
+import './../../../assets/scss/components/header/headersearch.scss';
 
 export default function HeaderSearch() {
     return (
@@ -8,8 +8,7 @@ export default function HeaderSearch() {
             <div className="container">
                 <div className="header_search_box">
                     <Box className="header_search_box">
-                        <TextField className='header_search_input1' id="standard-basic" label="Поиск по категориям" variant="standard" />
-                        <TextField className='header_search_input2' id="standard-basic" label="Поиск по товарам" variant="standard" />
+                        <TextField className='header_search_input1' id="standard-basic" label="Поиск по товарам" variant="standard" />
                     </Box>
                 </div>
             </div>

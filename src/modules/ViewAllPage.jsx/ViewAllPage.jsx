@@ -1,8 +1,8 @@
 import TopBar from './../../components/TopBar/TopBar'
 import Header from './../../components/Header/Header'
-import products from './../../components/data/Product'
-import { cakes } from './../../components/data/Presents'
-import { flowers } from './../../components/data/Seasons'
+import products from './../../data/Product'
+import { cakes } from './../../data/Presents'
+import { flowers } from './../../data/Seasons'
 import './../../assets/scss/pages/view_page.scss'
 import Button from './../../components/ui/Button'
 
@@ -15,9 +15,6 @@ export default function ViewAllPage() {
 
     return (
         <section className="view_page">
-            <TopBar />
-            <Header />
-
             <div className="container">
                 <h2 className="view_title">Все товары</h2>
                 <ul className="view_list">

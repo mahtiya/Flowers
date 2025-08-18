@@ -1,15 +1,15 @@
-import './../../assets/scss/components/TopBar.scss';
+import './../../assets/scss/components/home/TopBar.scss';
 import TopBarIcon1 from './../../assets/icons/heart.svg';
 import TopBarIcon2 from './../../assets/icons/delivery.svg';
 import TopBarIcon3 from './../../assets/icons/Call.svg';
-import TopBarIcon4 from './../../assets/icons/person.svg';
-import TopBarIcon5 from './../../assets/icons/stick.svg';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 import InputBase from '@mui/material/InputBase';
 import { useState } from 'react';
+import Insta from './../../assets/icons/insta.svg';
+import Teg from './../../assets/icons/teg.svg';
 
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
@@ -81,20 +81,23 @@ export default function TopBar() {
                         </div>
                     </div>
                     <div className="topbar_items">
-                        <div className="topbar_item">
-                            <div className="topbar_icon">
-                                <img className='topbar_img' src={TopBarIcon4} alt="" />
+                        <div className="top_media_block">
+                                <div className="top_social">
+                                    <a href="https://www.instagram.com/mirsvetov.kg.kyzylkiya?igsh=ZnVkaGxxbzBiOThl">
+                                        <img className='top_social_img' src={Insta} alt="" />
+                                    </a>
+                                </div>
+                                <div className="top_social">
+                                    <a href="https://t.me/mar_ziya">
+                                        <img className='top_social_img' src={Teg} alt="" />
+                                    </a>
+                                </div>
+                            <div className="top_media_num">
+                                <p>+996 999 38 34 32</p>
                             </div>
-                            <p className='topbar_sup'>Вход</p>
-                        </div>
-
-                        <div className="topbar_item">
-                            <div className="topbar_icon">
-                                <img className='topbar_img' src={TopBarIcon5} alt="" />
-                            </div>
-                            <p className='topbar_sup'>Регистрация</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section >

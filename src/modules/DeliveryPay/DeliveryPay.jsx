@@ -4,8 +4,7 @@ import Header from './../../components/Header/Header'
 export default function DeliveryPay() {
   return (
     <div>
-      <TopBar />
-      <Header />
+      
     </div>
   )
 }

@@ -1,11 +1,19 @@
 import './assets/scss/main.scss';
-import Layout from './Layout/Layout';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Map from './components/Map/Map';
+import RoutePage from './components/RoutePage/RoutePage';
+import TopBar from './components/TopBar/TopBar';
 
 
 export default function App() {
   return (
-    <div>
-      <Layout />
-    </div>
+    <>
+      <TopBar />
+      <Header />
+      <RoutePage />
+      <Map />
+      <Footer />
+    </>
   )
 }

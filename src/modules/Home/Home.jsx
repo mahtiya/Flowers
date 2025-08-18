@@ -1,25 +1,19 @@
-import Header from './../../components/Header/Header';
-import Banner from './../../components/Banner/Banner';
-import Discounting from './../../components/Discount/Discounting';
-import Season from './../../components/Season/Season';
-import Present from './../../components/Present/Present';
-import Forum from './../../components/Forum/Forum';
-import Map from './../../components/Map/Map';
-import Footer from './../../components/Footer/Footer';
-import TopBar from './../../components/TopBar/TopBar';
+import Banner from "./Components/Banner/Banner";
+import Cards from "./Components/Cards/Cards";
+import Discounting from "./Components/Discount/Discounting";
+import Forum from "./Components/Forum/Forum";
+import Present from "./Components/Present/Present";
+import Season from "./Components/Season/Season";
 
 export default function Home() {
     return (
-        <div>
-            <TopBar />
-            <Header />
+        <main>
             <Banner />
+            <Cards />
             <Discounting />
             <Season />
             <Present />
             <Forum />
-            <Map />
-            <Footer />
-        </div>
+        </main>
     )
 }

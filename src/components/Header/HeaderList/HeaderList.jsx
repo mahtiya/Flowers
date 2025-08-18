@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import './../../../assets/scss/components/headerlist.scss';
+import { NavLink } from 'react-router-dom';
+import './../../../assets/scss/components/header/headerlist.scss';
 export default function HeaderList() {
   return (
     <section className="header_list">
@@ -7,22 +7,22 @@ export default function HeaderList() {
         <div className="header_list_block">
           <ul className='header_list_ul'>
             <li className='header_list_item'>
-              <Link to="view-all">Каталог товаров</Link>
+              <NavLink to="">Главная</NavLink>
             </li>
             <li className='header_list_item'>
-              <Link to="forums">Форум</Link>
+              <NavLink to="view-all">Каталог</NavLink>
             </li>
             <li className='header_list_item'>
-              <Link to="comments">Отзывы</Link>
+              <NavLink to="forums">Форум</NavLink>
             </li>
             <li className='header_list_item'>
-              <Link to="discount">Акции</Link>
+              <NavLink to="comments">Отзывы</NavLink>
             </li>
             <li className='header_list_item'>
-              <Link to="news">Новости</Link>
+              <NavLink to="news">Новости</NavLink>
             </li>
             <li className='header_list_item'>
-              <Link to="info">Информация</Link>
+              <NavLink to="info">Информация</NavLink>
             </li>
           </ul>
         </div>
