@@ -1,6 +1,8 @@
 import Button from "./../../components/ui/Button";
 import './../../assets/scss/components/product_wrap.scss'
+import { useNavigate } from "react-router-dom";
 export default function ProductWrap({ item, index }) {
+    const navigate = useNavigate()
     return (
         <li style={{ borderRadius: "15px" }} key={index} className="li_item" >
             <div>
@@ -19,7 +21,7 @@ export default function ProductWrap({ item, index }) {
                 </div>
             </div>
             <div className='li_btn'>
-                <Button btn="Заказать" />
+                <Button btn="Заказать" onClick={() => navigate(`/product/${item.id}`)} />
             </div>
         </li>
     )

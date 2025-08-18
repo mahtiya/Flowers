@@ -10,9 +10,13 @@ export default function Season() {
     useEffect(() => {
         fetch('https://687d6750918b64224331bd88.mockapi.io/products')
             .then(res => res.json())
-            .then(data => setSeason(data))
+            .then(data => {
+                const seasonProducts = data.filter(item => item.category === "season")
+                setSeason(seasonProducts)
+            })
             .catch(err => console.error('Ошибка загрузки:', err))
     }, [])
+
     return (
         <section className="season">
             <div className="container">
@@ -22,7 +26,6 @@ export default function Season() {
                 </div>
             </div>
 
-
             <ul className="season_list">
                 <Marquee
                     speed={100}
@@ -31,11 +34,10 @@ export default function Season() {
                     pauseOnHover={true}
                 >
                     {season.map((item, index) => (
-                        <ProductWrap item={item} index={index} />
+                        <ProductWrap item={item} key={index} />
                     ))}
                 </Marquee>
             </ul>
-
         </section>
     );
 }

@@ -10,7 +10,10 @@ export default function Discounting() {
     useEffect(() => {
         fetch('https://687d6750918b64224331bd88.mockapi.io/products')
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => {
+                const discountProducts = data.filter(item => item.category === "discount")
+                setProducts(discountProducts)
+            })
             .catch(err => console.error('Ошибка загрузки:', err))
     }, [])
 
@@ -35,7 +38,6 @@ export default function Discounting() {
                     ))}
                 </Marquee>
             </ul>
-
         </section>
     )
 }

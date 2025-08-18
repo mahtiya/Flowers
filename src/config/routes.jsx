@@ -7,6 +7,7 @@ import Forums from '../modules/Forums/Forums'
 import Home from '../modules/Home/Home'
 import Information from '../modules/Information/Information'
 import News from '../modules/News/News'
+import SinglePage from '../modules/SinglePage/SinglePage'
 import ViewAllPage from '../modules/ViewAllPage.jsx/ViewAllPage'
 import Notes from './../modules/Notes/Notes'
 
@@ -51,12 +52,14 @@ export const routes = () => {
             id: 9,
             path: '/forums',
             element: <Forums />
-        },
-
-        {
+        }, {
             id: 10,
             path: '/notes',
             element: <Notes />
-        },
+        }, {
+            id: 11,
+            path: '/product/:id',
+            element: <SinglePage />
+        }
     ]
 }
