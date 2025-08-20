@@ -1,7 +1,6 @@
 import HeaderLogo from './../../assets/images/Логотип.png';
 import HeaderSearch from './HeaderSearch/HeaderSearch';
 import './../../assets/scss/components/header/header.scss';
-import HeaderMedia from './HeaderMedia/HeaderMedia';
 import HeaderList from './HeaderList/HeaderList';
 import Design from './../../assets/icons/design_right.svg'
 
@@ -21,9 +20,6 @@ export default function Header() {
             <div className="head_list">
               <HeaderList />
             </div>
-          </div>
-          <div className="header_social_team">
-            <HeaderMedia />
           </div>
         </div>
       </div>

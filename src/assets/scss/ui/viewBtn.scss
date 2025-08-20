@@ -1,24 +1,43 @@
 .view_all {
-    width: 300px;
-    height: 73px;
-    opacity: 1;
-    border-radius: 7px;
-    font-family: Golos Text;
+    width: 250px;
+    height: 70px;
+    font-family: "PT Sans", sans-serif;
+
     font-weight: 700;
     font-size: 18px;
-    line-height: 18px;
-    background-color: #956D84;
-    color: #FFFFFF;
+    color: #fff;
     border: none;
-    box-shadow: 0px 0px 20px #956D84;
+    border-radius: 12px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    cursor: pointer;
+    gap: 12px;
+    background: #956D84;
+    background: linear-gradient(135deg, #956D84, #BD5992);
+    box-shadow: 0 6px 20px rgba(149, 109, 132, 0.3);
+    transition: all 0.35s ease;
 
     &:hover {
-        background-color: #bd5992;
+        background: linear-gradient(135deg, #BD5992, #956D84);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 25px rgba(149, 109, 132, 0.45);
+    }
 
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 12px rgba(149, 109, 132, 0.3);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(149, 109, 132, 0.25);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
     }
 }

@@ -1,15 +1,9 @@
-
-
-
-
 .li_item {
     margin-left: 20px;
     border: 1px solid #956D84;
     width: 340px;
     height: 600px;
 }
-
-
 
 .li_img {
     width: 100%;
@@ -25,18 +19,54 @@
     align-items: center;
 }
 
+.li_name_wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 160px; // ширина контейнера, под которую делаем ellipsis
+}
+
 .li_name {
+    white-space: nowrap; // одна строка
+    overflow: hidden; // скрываем лишний текст
+    text-overflow: ellipsis; // добавляем троеточие
+    cursor: pointer;
+
     color: #333333;
-    font-family: Golos Text;
+    font-family: "PT Sans", sans-serif;
     font-size: 18px;
     font-weight: 300;
-    line-height: 18px;
+    line-height: 18px; // ограничение по ширине контейнера
+
 }
+
+.li_name_wrapper:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: #956D84;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: normal;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 10;
+}
+
+
 
 
 .li_old {
     color: #BDBDBD;
-    font-family: Golos Text;
+    font-family: "PT Sans", sans-serif;
+    
     font-weight: 300;
     font-size: 18px;
     line-height: 18px;
@@ -44,7 +74,7 @@
 
 .li_price {
     color: #956D84;
-    font-family: Golos Text;
+    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 18px;
@@ -61,7 +91,7 @@
 .li_sup {
     color: #828282;
     text-decoration: underline;
-    font-family: Golos Text;
+    font-family: "PT Sans", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;

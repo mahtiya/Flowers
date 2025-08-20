@@ -22,7 +22,7 @@ export default function Present() {
             <div className="container">
                 <div className="present_header">
                     <h6 className='present_title'>Подарки</h6>
-                    <div className="view_all_btn"><ViewBtn /></div>
+                    <div><ViewBtn /></div>
                 </div>
             </div>
 

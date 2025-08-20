@@ -4,7 +4,7 @@ import { FaArrowCircleRight } from "react-icons/fa";
 export default function ViewBtn() {
     return (
         <Link to="view-all">
-            <button className="view_all">Посмотреть каталог <FaArrowCircleRight /></button>
+            <button className="view_all">КАТАЛОГ<FaArrowCircleRight /></button>
         </Link >
     )
 }

@@ -14,7 +14,7 @@
 
 .top_bar_items {
     display: flex;
-    gap: 63px;
+    gap: 53px;
 }
 
 .topbar_items {
@@ -31,22 +31,49 @@
 }
 
 .topbar_suptitle a {
-    color: rgb(255, 255, 255);
-    font-family: Golos Text;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-family: "PT Sans", sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 18px;
+    transition: color 0.3s ease;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: #956D84;
+        transition: width 0.3s ease;
+    }
+
+    &::before {
+        left: 50%;
+    }
+
+    &::after {
+        right: 50%;
+    }
 
     &:hover {
-        color: rgb(149, 109, 132);
-        text-decoration: underline;
+        color: #956D84;
+
+        &::before,
+        &::after {
+            width: 50%;
+        }
     }
 }
 
 
 .topbar_sup {
     color: rgb(255, 255, 255);
-    font-family: Golos Text;
+    font-family: "PT Sans", sans-serif;
+
     font-size: 16px;
     font-weight: 300;
     line-height: 18px;
@@ -56,7 +83,8 @@
 
 .topbar_lang {
     color: rgb(255, 255, 255);
-    font-family: Golos Text;
+    font-family: "PT Sans", sans-serif;
+
     font-size: 16px;
     font-weight: 300;
     line-height: 18px;
@@ -76,11 +104,12 @@
 
 .top_media_num {
     color: rgb(255, 255, 255);
-    font-family: Golos Text;
+       font-family: "PT Sans", sans-serif;
+
     font-size: 16px;
     font-weight: 300;
     line-height: 18px;
-} 
+}
 
 .top_social {
     border-radius: 50%;
@@ -99,4 +128,32 @@
     align-items: center;
     width: 15px;
     height: 15px;
+}
+
+.topbar_item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #fffdfd;
+
+    .topbar_lang {
+        font-weight: 500;
+        margin-right: 6px;
+    }
+
+    span {
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #956D84;
+        }
+    }
+
+    span.active {
+        font-weight: 600;
+        color: #956D84;
+    }
 }

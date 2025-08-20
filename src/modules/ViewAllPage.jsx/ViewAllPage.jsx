@@ -1,18 +1,14 @@
 import ProductWrap from '../../components/ProductWrap/ProductWrap'
 import './../../assets/scss/pages/view_page.scss'
 import { useEffect, useState } from 'react'
+import { FaCheck } from "react-icons/fa6";
+import Pagination from '@mui/material/Pagination';
 
 export default function ViewAllPage() {
     const [products, setProducts] = useState([])
-    const [selectedFilters, setSelectedFilters] = useState([])
-    const [openCategories, setOpenCategories] = useState({})
-
-    // Фильтры — ключевые слова, которые реально встречаются в name
-    const filterData = {
-        'Букеты': ['розы', 'пионы', 'тюльпаны', 'лилии'],
-        'Десерты': ['торт', 'кекс', 'печенье'],
-        'Подарки': ['шоколад', 'игрушка', 'корзина']
-    }
+    const [filter, setFilter] = useState("all")
+    const [currentPage, setCurrentPage] = useState(1)
+    const itemsPerPage = 6
 
     useEffect(() => {
         fetch('https://687d6750918b64224331bd88.mockapi.io/products')
@@ -21,67 +17,65 @@ export default function ViewAllPage() {
             .catch(err => console.error('Ошибка загрузки:', err))
     }, [])
 
-    const toggleCategory = (cat) => {
-        setOpenCategories(prev => ({ ...prev, [cat]: !prev[cat] }))
-    }
-
-    const handleFilterClick = (filterName) => {
-        setSelectedFilters(prev =>
-            prev.includes(filterName)
-                ? prev.filter(f => f !== filterName)
-                : [...prev, filterName]
-        )
-    }
-
-    // Фильтруем по ключевым словам в name
-    const filteredProducts = products.filter(product => {
-        if (selectedFilters.length === 0) return true
-        return selectedFilters.some(filter =>
-            product.name.toLowerCase().includes(filter.toLowerCase())
-        )
+    const filteredProducts = products.filter(item => {
+        if (filter === "all") return true
+        return item.category === filter || item.flowers?.includes(filter) || item.toyType === filter
     })
+
+    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage)
+    const startIndex = (currentPage - 1) * itemsPerPage
+    const currentProducts = filteredProducts.slice(startIndex, startIndex + itemsPerPage)
+
+    const filters = [
+        { value: "all", label: "Все" },
+        { value: "discount", label: "Букеты в акциях" },
+        { value: "present", label: "Подарки для близких" },
+        { value: "season", label: "Сезонные цветы" },
+        { value: "Розы", label: "Розы" },
+        { value: "Тюльпаны", label: "Тюльпаны" },
+        { value: "Лилии", label: "Лилии" },
+        { value: "Пионы", label: "Пионы" },
+        { value: "Медведи", label: "Плюшевые мишки" }
+    ]
 
     return (
         <section className="view_page">
             <div className="container">
-                <div className="filter_wrapper">
-                    <div className="filter_sidebar">
-                        {Object.entries(filterData).map(([category, subcategories], index) => (
-                            <div key={index} className="filter_group">
-                                <h3
-                                    className="filter_title"
-                                    onClick={() => toggleCategory(category)}
-                                    style={{ cursor: 'pointer' }}
+                <h2 className="view_title">Каталог товаров</h2>
+                <div className="product_display">
+                    <div className='product_filter'>
+                        <div className="filter_cards">
+                            {filters.map(f => (
+                                <div
+                                    key={f.value}
+                                    className={`filter_card ${filter === f.value ? 'active' : ''}`}
+                                    onClick={() => { setFilter(f.value); setCurrentPage(1) }}
                                 >
-                                    {category} {openCategories[category] ? '-' : '+'}
-                                </h3>
-                                {openCategories[category] && subcategories.length > 0 && (
-                                    <ul className="filter_list">
-                                        {subcategories.map((item, subIndex) => (
-                                            <li
-                                                key={subIndex}
-                                                className={`filter_item ${selectedFilters.includes(item) ? 'active' : ''}`}
-                                                onClick={() => handleFilterClick(item)}
-                                            >
-                                                {item}
-                                                {selectedFilters.includes(item) && (
-                                                    <span className="checkmark">✅</span>
-                                                )}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </div>
-                        ))}
+                                    <FaCheck className='check_icon' />
+                                    <span>{f.label}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
-                    <div className="product_display">
-                        <h2 className="view_title">Категории</h2>
+                    <div className="product_list_wrapper">
                         <ul className="view_list">
-                            {filteredProducts.map((item, index) => (
+                            {currentProducts.map((item, index) => (
                                 <ProductWrap item={item} index={index} key={item.id} />
                             ))}
                         </ul>
+
+                        <div className="pagination_wrapper">
+                            <Pagination
+                                count={totalPages}
+                                page={currentPage}
+                                onChange={(e, page) => setCurrentPage(page)}
+                                color="primary"
+                                shape="rounded"
+                                showFirstButton
+                                showLastButton
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

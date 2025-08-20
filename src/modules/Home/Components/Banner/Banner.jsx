@@ -1,9 +1,9 @@
 
-import Banner1 from './../../../../assets/images/banner1.png';
-import Banner2 from './../../../../assets/images/banner2.png';
-import Banner3 from './../../../../assets/images/banner3.png';
-import Banner4 from './../../../../assets/images/banner4.png';
-import Banner5 from './../../../../assets/images/banner5.png';
+import Banner1 from './../../../../assets/icons/banner1.svg';
+import Banner2 from './../../../../assets/icons/banner2.svg';
+import Banner3 from './../../../../assets/icons/banner3.svg';
+import Banner4 from './../../../../assets/icons/banner4.svg';
+import Banner5 from './../../../../assets/icons/banner5.svg';
 import './../../../../assets/scss/components/home/banner.scss';
 
 export default function Banner() {

@@ -1,14 +1,23 @@
-.discount_btn {
+.order_btn {
     width: 220px;
     height: 63px;
-    opacity: 1;
     border-radius: 7px;
-    font-family: Golos Text;
+    font-family: "PT Sans", sans-serif;
+
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    background-color: #956D84;
     color: #FFFFFF;
     border: none;
     cursor: pointer;
+
+    background-color: #956D84;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #BD5992;
+    }
 }

@@ -1,100 +1,112 @@
-.view_page {
+.product_display {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+}
 
-    .view_title {
-        padding-top: 60px;
-        text-align: center;
-        color: rgb(51, 51, 51);
-        font-family: Golos Text;
-        font-size: 50px;
+.product_filter {
+    width: 400px; // левая колонка
+
+    h3 {
+        font-family: "PT Sans", sans-serif;
         font-weight: 700;
-        line-height: 18px;
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: #333;
     }
 
-    .view_list {
-        padding-top: 60px;
+    .filter_cards {
         display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
+        flex-direction: column; // столбик
+        gap: 12px;
     }
 
-    .view_item {
+    .filter_card {
+        width: 250px;
+        height: 60px;
         display: flex;
-        flex-direction: column;
-        border: 1px solid #956D84;
-        width: 340px;
-        height: 600px;
-        background: #fff;
-    }
-
-    .view_img_wrap {
-        background: #FBF9FA;
-    }
-
-    .view_img {
-        width: 100%;
-        height: 366px;
-        object-fit: cover;
-    }
-
-    .view_rating {
-        padding-left: 20px;
-        padding-top: 10px;
-        color: yellow;
-    }
-
-    .view_content {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 20px 0 20px;
         align-items: center;
-    }
-
-    .view_name {
-        color: #333333;
-        font-family: Golos Text;
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 18px;
-    }
-
-
-
-
-    .view_old_price {
-        color: #BDBDBD;
-        font-family: Golos Text;
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 18px;
-    }
-
-    .view_price {
+        gap: 8px;
+        padding: 10px 18px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 500;
         color: #956D84;
-        font-family: Golos Text;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 18px;
+        background: #fff;
+        border: 2px solid transparent;
+        box-shadow: 0 4px 12px rgba(149, 109, 132, 0.1);
+        transition: all 0.3s ease;
+
+        .check_icon {
+            font-size: 16px;
+            color: transparent;
+            transition: color 0.3s ease;
+        }
+
+
+
+        &.active {
+            color: #fff;
+            font-weight: 700;
+            border: 2px solid #956D84;
+
+            .check_icon {
+                color: #fff;
+            }
+        }
     }
 }
 
-.view_actions {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
+.view_title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "PT Sans", sans-serif;
+    color: rgb(149, 109, 132);
 
-    .view_fast {
-        color: #828282;
-        text-decoration: underline;
-        font-family: Golos Text;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 18px;
-        margin-top: 10px;
+    /* Лёгкая тень для объёма */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+
+    /* Плавный переход цвета при наведении */
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: rgb(189, 89, 146);
+        /* чуть ярче при наведении */
     }
 }
-.filter_wrapper {
+
+
+.view_list {
+    flex: 1; // правая колонка растягивается
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.pagination_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    .MuiPaginationItem-root {
+        font-family: "PT Sans", sans-serif;
+        font-weight: 500;
+        color: #956D84;
+
+        &.Mui-selected {
+            background-color: #956D84;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        &:hover {
+            background-color: rgba(149, 109, 132, 0.1);
+        }
+    }
 }

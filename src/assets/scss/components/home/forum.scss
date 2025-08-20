@@ -23,7 +23,8 @@
     position: absolute;
     bottom: 10px;
     left: 5%;
-    font-family: Golos Text;
+    font-family: "PT Sans", sans-serif;
+
     font-weight: 250;
     font-size: 16px;
     color: #FFFFFF;
@@ -42,11 +43,15 @@
 
 .forum_title {
     text-align: center;
-    color: rgb(51, 51, 51);
-    font-family: Golos Text;
     font-size: 50px;
     font-weight: 700;
-    line-height: 18px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgb(149, 109, 132);
+    font-family: "PT Sans", sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 
 }
 
@@ -57,7 +62,8 @@
     bottom: 70px;
     left: 5%;
     color: #FFFFFF;
-    font-family: Golos Text;
+    font-family: "PT Sans", sans-serif;
+
     font-weight: 300;
     font-size: 18px;
     line-height: 18px;
@@ -70,7 +76,47 @@
     right: 0;
 }
 
+.forum_page_items {
+    padding-top: 60px;
+}
+
 .design_right_img {
     width: 152px;
     height: 512px;
+}
+
+.forum_page_bg {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #956D84;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+        color: white;
+        background: #b48aa2;
+    }
+
+    p {
+        color: white;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    .rotate {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+    }
+}
+
+.forum_page_sup {
+    padding: 10px 20px;
+    background: #fff0f5;
+    border-radius: 10px;
+    margin-top: 5px;
 }

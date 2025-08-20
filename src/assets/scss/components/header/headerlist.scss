@@ -8,13 +8,47 @@
 }
 
 .header_list_item a {
+    position: relative;
+    display: inline-block;
     color: rgb(51, 51, 51);
-    font-family: Golos Text;
-    font-size: 16px;
+    font-family: "PT Sans", sans-serif;
+
+    font-size: 18px;
     font-weight: 700;
     line-height: 18px;
+    transition: color 0.3s ease;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: rgb(149, 109, 132);
+        transition: width 0.3s ease;
+    }
+
+    &::before {
+        left: 50%;
+    }
+
+    &::after {
+        right: 50%;
+    }
 
     &:hover {
         color: rgb(149, 109, 132);
+
+        &::before,
+        &::after {
+            width: 50%;
+            height: 3px;
+        }
+    }
+
+    span.active {
+        font-weight: 600;
+        color: #956D84;
     }
 }

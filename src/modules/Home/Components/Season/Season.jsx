@@ -22,7 +22,7 @@ export default function Season() {
             <div className="container">
                 <div className="season_header">
                     <h6 className='season_title'>Сезонные</h6>
-                    <div className="view_all_btn"><ViewBtn /></div>
+                    <div ><ViewBtn /></div>
                 </div>
             </div>
 

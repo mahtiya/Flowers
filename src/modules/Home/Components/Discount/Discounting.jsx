@@ -22,7 +22,7 @@ export default function Discounting() {
             <div className="container">
                 <div className="discount_header">
                     <h5 className='discount_title'>Акции</h5>
-                    <div className="view_all_btn"><ViewBtn /></div>
+                    <div><ViewBtn /></div>
                 </div>
             </div>
 
