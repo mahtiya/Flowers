@@ -1,10 +1,7 @@
-import TopBar from './../../components/TopBar/TopBar';
-import Header from './../../components/Header/Header'
+import React from 'react'
 
 export default function Notes() {
-    return (
-        <div>
-         
-        </div>
-    )
+  return (
+    <div>Notes</div>
+  )
 }

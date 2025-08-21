@@ -41,9 +41,9 @@
     flex-direction: column;
     gap: 20px;
     padding: 30px;
-    background: linear-gradient(135deg, #fff0f5, #fcd6e7);
-    border-radius: 25px;
-    box-shadow: 0 12px 35px rgba(149, 109, 132, 0.15);
+    // background: linear-gradient(135deg, #fff0f5, #fcd6e7);
+    // border-radius: 25px;
+    // box-shadow: 0 12px 35px rgba(149, 109, 132, 0.15);
 }
 
 .single_title {
@@ -75,16 +75,27 @@
     }
 }
 
+.single_list {
+    display: flex;
+    gap: 23px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 .single_size,
 .single_materials {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    color: #555;
+    color: #BDBDBD;
 
     span {
-        font-weight: 600;
-        color: #333;
+        font-weight: 400;
+        color: #333333;
     }
 }
 
@@ -93,7 +104,7 @@
     gap: 5px;
     font-size: 24px;
     color: #f5c518;
-    padding-top: 20px;
+    padding-top: 10px;
 
     svg {
         transition: transform 0.2s ease, color 0.3s ease;
@@ -111,7 +122,7 @@
     font-weight: 400;
     line-height: 1.6;
     color: #666;
-    margin-top: 20px;
+    margin-top: 10px;
 
     span {
         font-weight: 500;
@@ -121,6 +132,60 @@
 
 .single_btn {
     margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.single_count {
+    display: flex;
+    align-items: center;
+    height: 63px;
+    border: 2px solid #956D84;
+    border-radius: 7px;
+
+    p {
+        text-align: center;
+        width: 60px;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 18px;
+    }
+
+    .btn_1 {
+        border-right: 2px solid #956D84;
+        border-radius: 6px 0px 0px 6px;
+    }
+
+    
+    .btn_2 {
+        border-left: 2px solid #956D84;
+        border-radius: 0px 6px 6px 0px;
+    }
+
+    button {
+        width: 60px;
+        height: 63px;
+        font-family: "PT Sans", sans-serif;
+
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 18px;
+        color: #956D84;
+        cursor: pointer;
+        border: none;
+
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #956D84;
+            color: #fff;
+        }
+    }
 }
 
 @media screen and (max-width: 1200px) {

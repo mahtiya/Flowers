@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './../../../../assets/scss/components/home/discounting.scss';
 import Marquee from 'react-fast-marquee';
 import ViewBtn from '../../../../components/ui/ViewBtn';
-import ProductWrap from '../../../../components/ProductWrap/ProductWrap';
+import ProductItem from '../../../../components/ProductItem/ProductItem';
 
 export default function Discounting() {
     const [products, setProducts] = useState([])
@@ -33,8 +33,9 @@ export default function Discounting() {
                     gradient={false}
                     pauseOnHover={true}
                 >
+
                     {products.map((product, index) => (
-                        <ProductWrap item={product} key={index} />
+                        <ProductItem item={product} key={index} />
                     ))}
                 </Marquee>
             </ul>

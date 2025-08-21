@@ -1,4 +1,5 @@
 
+import About from '../modules/About/About'
 import Comments from '../modules/Comments/Comments'
 import Contacts from '../modules/Contacts/Contacts'
 import DeliveryPay from '../modules/DeliveryPay/DeliveryPay'
@@ -38,9 +39,7 @@ export const routes = () => {
             id: 6,
             path: '/discount',
             element: <Discount />
-        },
-
-        {
+        }, {
             id: 7,
             path: '/news',
             element: <News />
@@ -60,6 +59,11 @@ export const routes = () => {
             id: 11,
             path: '/product/:id',
             element: <SinglePage />
-        }
+        },
+        {
+            id: 12,
+            path: '/about',
+            element: <About />
+        },
     ]
 }

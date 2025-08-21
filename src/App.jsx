@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Map from './components/Map/Map';
 import RoutePage from './components/RoutePage/RoutePage';
 import TopBar from './components/TopBar/TopBar';
+import { Toaster } from 'react-hot-toast';
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <RoutePage />
       <Map />
       <Footer />
+      <Toaster />
     </>
   )
 }

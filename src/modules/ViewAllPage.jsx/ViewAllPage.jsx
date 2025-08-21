@@ -1,8 +1,8 @@
-import ProductWrap from '../../components/ProductWrap/ProductWrap'
 import './../../assets/scss/pages/view_page.scss'
 import { useEffect, useState } from 'react'
 import { FaCheck } from "react-icons/fa6";
 import Pagination from '@mui/material/Pagination';
+import ProductItem from '../../components/ProductItem/ProductItem';
 
 export default function ViewAllPage() {
     const [products, setProducts] = useState([])
@@ -61,7 +61,7 @@ export default function ViewAllPage() {
                     <div className="product_list_wrapper">
                         <ul className="view_list">
                             {currentProducts.map((item, index) => (
-                                <ProductWrap item={item} index={index} key={item.id} />
+                                <ProductItem item={item} index={index} key={item.id} />
                             ))}
                         </ul>
 

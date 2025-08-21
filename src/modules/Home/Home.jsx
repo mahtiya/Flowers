@@ -1,4 +1,5 @@
 import Banner from "./Components/Banner/Banner";
+import Cake from "./Components/Cake/Cake";
 import Cards from "./Components/Cards/Cards";
 import Discounting from "./Components/Discount/Discounting";
 import Forum from "./Components/Forum/Forum";
@@ -13,6 +14,7 @@ export default function Home() {
             <Discounting />
             <Season />
             <Present />
+            <Cake />
             <Forum />
         </main>
     )

@@ -2,14 +2,12 @@
     margin-left: 20px;
     border: 1px solid #956D84;
     width: 340px;
-    height: 600px;
 }
 
 .li_img {
     width: 100%;
     height: 366px;
     object-fit: cover;
-    background-color: #956D84;
 }
 
 .li_team {
@@ -22,20 +20,20 @@
 .li_name_wrapper {
     position: relative;
     display: inline-block;
-    max-width: 160px; // ширина контейнера, под которую делаем ellipsis
+    max-width: 160px;
 }
 
 .li_name {
-    white-space: nowrap; // одна строка
-    overflow: hidden; // скрываем лишний текст
-    text-overflow: ellipsis; // добавляем троеточие
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     cursor: pointer;
 
     color: #333333;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     font-weight: 300;
-    line-height: 18px; // ограничение по ширине контейнера
+    line-height: 18px;
 
 }
 
@@ -66,7 +64,7 @@
 .li_old {
     color: #BDBDBD;
     font-family: "PT Sans", sans-serif;
-    
+
     font-weight: 300;
     font-size: 18px;
     line-height: 18px;
@@ -81,11 +79,11 @@
 }
 
 .li_btn {
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .li_sup {

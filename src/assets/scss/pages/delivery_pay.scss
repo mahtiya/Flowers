@@ -1,0 +1,70 @@
+.deliver_pay {
+    .deliver_pay_title {
+        font-family: "PT Sans", sans-serif;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 18px;
+        text-align: center;
+        color: #333333;
+        padding: 15px 0px;
+        margin-bottom: 60px;
+    }
+
+
+    .deliver_pay_text {
+        color: #6b6b6b;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 100;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+    }
+
+    .deliver_pay_list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        color: #6b6b6b;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 100;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+
+        li {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 9.5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #956D84;
+        }
+
+
+    }
+
+    .wrapper_text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .credit_card {
+        display: flex;
+        gap: 30px;
+        margin: 50px 0px;
+        img {
+            height: 70px;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
+

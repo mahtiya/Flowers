@@ -10,7 +10,7 @@ import Teg from './../../assets/icons/teg.svg';
 
 
 export default function TopBar() {
-    const [age, setAge] = useState('');
+    const [age, setAge] = useState('')
     const handleChange = (event) => {
         setAge(event.target.value);
     };
@@ -28,7 +28,7 @@ export default function TopBar() {
                                 <img className='topbar_img' src={TopBarIcon1} alt="" />
                             </div>
                             <p className='topbar_suptitle'>
-                                <NavLink to="notes">О нас</NavLink>
+                                <NavLink to="/about">О нас</NavLink>
                             </p>
                         </div>
                         <div className="topbar_item">

@@ -1,8 +1,8 @@
 import './../../../../assets/scss/components/home/season.scss';
 import Marquee from 'react-fast-marquee';
 import ViewBtn from '../../../../components/ui/ViewBtn';
-import ProductWrap from '../../../../components/ProductWrap/ProductWrap';
 import { useEffect, useState } from 'react';
+import ProductItem from '../../../../components/ProductItem/ProductItem';
 
 export default function Season() {
     const [season, setSeason] = useState([])
@@ -34,7 +34,7 @@ export default function Season() {
                     pauseOnHover={true}
                 >
                     {season.map((item, index) => (
-                        <ProductWrap item={item} key={index} />
+                        <ProductItem item={item} key={index} />
                     ))}
                 </Marquee>
             </ul>

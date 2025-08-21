@@ -5,7 +5,7 @@ import Pagination from '@mui/material/Pagination';
 export default function Comments() {
   const [review, setReview] = useState([]);
   const [page, setPage] = useState(1);
-  const itemsPerPage = 3; // показывать только по 3
+  const itemsPerPage = 3; 
 
   useEffect(() => {
     fetch("https://68a2cb21c5a31eb7bb1dcd1b.mockapi.io/review")
@@ -16,7 +16,7 @@ export default function Comments() {
 
   const handleChange = (event, value) => {
     setPage(value);
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // скролл вверх при переключении
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   };
 
   const startIndex = (page - 1) * itemsPerPage;

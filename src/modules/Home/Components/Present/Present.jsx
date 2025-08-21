@@ -1,17 +1,17 @@
 import './../../../../assets/scss/components/home/present.scss';
 import Marquee from 'react-fast-marquee';
 import ViewBtn from '../../../../components/ui/ViewBtn';
-import ProductWrap from '../../../../components/ProductWrap/ProductWrap';
 import { useEffect, useState } from 'react';
+import PresentItem from '../../../../components/PresentItem/PresentItem';
 
 export default function Present() {
     const [present, setPresent] = useState([])
 
     useEffect(() => {
-        fetch('https://687d6750918b64224331bd88.mockapi.io/products')
+        fetch('https://687d6750918b64224331bd88.mockapi.io/toys')
             .then(res => res.json())
             .then(data => {
-                const presentProducts = data.filter(item => item.category === "present")
+                const presentProducts = data.filter(item => item.category === "plush")
                 setPresent(presentProducts)
             })
             .catch(err => console.error('Ошибка загрузки:', err))
@@ -34,7 +34,7 @@ export default function Present() {
                     pauseOnHover={true}
                 >
                     {present.map((item, index) => (
-                        <ProductWrap item={item} key={index} />
+                        <PresentItem item={item} key={index} />
                     ))}
                 </Marquee>
             </ul>

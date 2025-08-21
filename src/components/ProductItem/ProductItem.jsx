@@ -1,27 +1,32 @@
-import Button from "./../../components/ui/Button";
-import './../../assets/scss/components/product_wrap.scss'
+import Button from "../ui/Button";
+import './../../assets/scss/components/product_single.scss'
 import { useNavigate } from "react-router-dom";
 import { IoMdStar } from "react-icons/io";
 import { IoMdStarOutline } from "react-icons/io";
-export default function ProductWrap({ item, index }) {
+
+export default function ProductItem({ item, index }) {
     const navigate = useNavigate()
     return (
         <li key={index} className="li_item" >
             <div>
                 <img className='li_img' src={item.image} alt={item.name} />
             </div>
-            <p className="li_rating">
-                {Array(item.rating)
-                    .fill(0)
-                    .map((_, i) => (
-                        <IoMdStar key={`star-filled-${i}`} />
-                    ))}
-                {Array(5 - item.rating)
-                    .fill(0)
-                    .map((_, i) => (
-                        <IoMdStarOutline key={`star-outline-${i}`} />
-                    ))}
-            </p>
+
+            {typeof item.rating === "number" && (
+                <p className="li_rating">
+                    {Array(item.rating)
+                        .fill(0)
+                        .map((_, i) => (
+                            <IoMdStar key={`star-filled-${i}`} />
+                        ))}
+                    {Array(5 - item.rating)
+                        .fill(0)
+                        .map((_, i) => (
+                            <IoMdStarOutline key={`star-outline-${i}`} />
+                        ))}
+                </p>
+            )}
+
             <div className='li_team'>
                 <div className="li_name_wrapper">
                     <h3 className="li_name">{item.name}</h3>
