@@ -2,12 +2,12 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import './../../assets/scss/pages/cake_single.scss'
 import Button from "../../components/ui/Button";
-import { FiPlus, FiMinus } from "react-icons/fi";
+import useCartStore from "../../store/useCartStore";
 
 export default function CakeSinglePage() {
     const { id } = useParams()
     const [single, setSingle] = useState()
-    const [count, setCount] = useState(1)
+    const addToCart = useCartStore((state) => state.addToCart);
 
     useEffect(() => {
         fetch(`https://68a2cb21c5a31eb7bb1dcd1b.mockapi.io/cakes/${id}`)
@@ -18,14 +18,6 @@ export default function CakeSinglePage() {
 
     if (!single) {
         return <p>Загрузка...</p>
-    }
-
-    const decrement = () => {
-        if (count > 1) setCount(count - 1)
-    }
-
-    const increment = () => {
-        if (count < 10) setCount(count + 1)
     }
 
     return (
@@ -65,12 +57,12 @@ export default function CakeSinglePage() {
                         </p>
 
                         <div className="cake_single_btn">
-                            <div className="cake_single_count">
-                                <button className="cake_btn_1" onClick={decrement}><FiMinus /></button>
-                                <p>{count}</p>
-                                <button className="cake_btn_2" onClick={increment}><FiPlus /></button>
-                            </div>
-                            <Button btn="В корзину" />
+                            <Button
+                                btn="В корзину"
+                                onClick={() => {
+                                    addToCart({ ...single, type: "cake" })
+                                }}
+                            />
                         </div>
                     </div>
                 </div>

@@ -28,7 +28,7 @@ export default function Forums() {
     <div className='forum_page'>
       <div className="container">
         <div className="forums_page_block">
-          <div className="forum_page_title">Форум</div>
+          <div className="forum_page_title">Часто задаваемые вопросы</div>
           <div className="forum_page_items">
             {faqItems.map((item, index) => (
               <div key={index} className="forum_block">

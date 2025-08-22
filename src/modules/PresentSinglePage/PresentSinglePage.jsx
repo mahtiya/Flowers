@@ -2,12 +2,13 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import './../../assets/scss/pages/present_single.scss'
 import Button from "../../components/ui/Button";
-import { FiPlus, FiMinus } from "react-icons/fi";
+import useCartStore from "../../store/useCartStore";
+import Cake from "../Home/Components/Cake/Cake";
 
 export default function PresentSinglePage() {
     const { id } = useParams()
     const [single, setSingle] = useState()
-    const [count, setCount] = useState(1)
+    const addToCart = useCartStore((state) => state.addToCart);
 
     useEffect(() => {
         fetch(`https://687d6750918b64224331bd88.mockapi.io/toys/${id}`)
@@ -18,14 +19,6 @@ export default function PresentSinglePage() {
 
     if (!single) {
         return <p>Загрузка...</p>
-    }
-
-    const decrement = () => {
-        if (count > 1) setCount(count - 1)
-    }
-
-    const increment = () => {
-        if (count < 10) setCount(count + 1)
     }
 
     return (
@@ -63,17 +56,18 @@ export default function PresentSinglePage() {
                             Описание: <span>{single.description}</span>
                         </p>
 
-                        <div className="present_single_btn">
-                            <div className="present_single_count">
-                                <button className="present_btn_1" onClick={decrement}><FiMinus /></button>
-                                <p>{count}</p>
-                                <button className="present_btn_2" onClick={increment}><FiPlus /></button>
-                            </div>
-                            <Button btn="В корзину" />
+                        <div className="product_single_btn">
+                            <Button
+                                btn="В корзину"
+                                onClick={() => {
+                                    addToCart({ ...single, type: "present" })
+                                }}
+                            />
                         </div>
                     </div>
                 </div>
             </div>
+            <Cake />
         </section>
     )
 }

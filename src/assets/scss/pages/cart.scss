@@ -40,6 +40,10 @@
         }
 
         tbody {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
             tr {
                 display: grid;
                 grid-template-columns: 130px 3fr 2fr 120px 2fr 1fr;

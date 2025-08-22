@@ -21,7 +21,7 @@ export default function Present() {
         <section className="present">
             <div className="container">
                 <div className="present_header">
-                    <h6 className='present_title'>Подарки</h6>
+                    <h6 className='present_title'>Игрушки</h6>
                     <div><ViewBtn /></div>
                 </div>
             </div>

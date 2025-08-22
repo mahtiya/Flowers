@@ -20,10 +20,6 @@ export default function TopBar() {
                 <div className="topbar_block">
                     <div className="top_bar_items">
                         <div className="topbar_item">
-                            <p className='topbar_lang'>Язык</p>
-                            <span>Ru</span> / <span>En</span>
-                        </div>
-                        <div className="topbar_item">
                             <div className="topbar_icon">
                                 <img className='topbar_img' src={TopBarIcon1} alt="" />
                             </div>

@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import './../../assets/scss/pages/product_single.scss'
-import { IoMdStar, IoMdStarOutline } from "react-icons/io";
 import Button from "../../components/ui/Button";
-import { FiPlus, FiMinus } from "react-icons/fi";
+import useCartStore from "../../store/useCartStore";
+import Present from "../Home/Components/Present/Present";
 
 export default function ProductSinglePage() {
     const { id } = useParams()
     const [single, setSingle] = useState()
-    const [count, setCount] = useState(1)
+    const addToCart = useCartStore((state) => state.addToCart);
 
     useEffect(() => {
         fetch(`https://687d6750918b64224331bd88.mockapi.io/products/${id}`)
@@ -19,14 +19,6 @@ export default function ProductSinglePage() {
 
     if (!single) {
         return <p>Загрузка...</p>
-    }
-
-    const decrement = () => {
-        if (count > 1) setCount(count - 1)
-    }
-
-    const increment = () => {
-        if (count < 10) setCount(count + 1)
     }
 
     return (
@@ -68,16 +60,18 @@ export default function ProductSinglePage() {
                         </p>
 
                         <div className="product_single_btn">
-                            <div className="product_single_count">
-                                <button className="product_btn_1" onClick={decrement}><FiMinus /></button>
-                                <p>{count}</p>
-                                <button className="product_btn_2" onClick={increment}><FiPlus /></button>
-                            </div>
-                            <Button btn="В корзину" />
+                            <Button
+                                btn="В корзину"
+                                onClick={() => {
+                                    addToCart({ ...single, type: "flower" })
+                                }}
+                            />
                         </div>
                     </div>
                 </div>
             </div>
+
+            <Present />
         </section>
     )
 }
