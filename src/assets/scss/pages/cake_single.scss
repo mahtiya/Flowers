@@ -1,0 +1,203 @@
+.cake_single_page {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.cake_single_main {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.cake_single_left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cake_single_left_img {
+        width: 100%;
+        max-width: 580px;
+        height: 580px;
+        border-radius: 25px;
+        object-fit: cover;
+        box-shadow: 0 12px 35px rgba(149, 109, 132, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 0 18px 45px rgba(149, 109, 132, 0.35);
+        }
+    }
+}
+
+.cake_single_right {
+    flex: 1;
+    max-width: 700px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+
+.cake_single_title {
+    font-family: "PT Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+}
+
+.cake_single_price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    s {
+        color: #bdbdbd;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    p {
+        color: #956D84;
+        font-weight: 700;
+        font-size: 22px;
+    }
+}
+
+.cake_single_list {
+    display: flex;
+    gap: 23px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.cake_single_size,
+.cake_single_materials {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #BDBDBD;
+
+    span {
+        font-weight: 400;
+        color: #333333;
+    }
+}
+
+.cake_single_rating {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+    color: #f5c518;
+    padding-top: 10px;
+
+    svg {
+        transition: transform 0.2s ease, color 0.3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+            color: #ffcc33;
+        }
+    }
+}
+
+.cake_single_description {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #666;
+    margin-top: 10px;
+
+    span {
+        font-weight: 500;
+        color: #333;
+    }
+}
+
+.cake_single_btn {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.cake_single_count {
+    display: flex;
+    align-items: center;
+    height: 63px;
+    border: 2px solid #956D84;
+    border-radius: 7px;
+
+    p {
+        text-align: center;
+        width: 60px;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 18px;
+    }
+
+    .cake_btn_1 {
+        border-right: 2px solid #956D84;
+        border-radius: 6px 0px 0px 6px;
+    }
+
+
+    .cake_btn_2 {
+        border-left: 2px solid #956D84;
+        border-radius: 0px 6px 6px 0px;
+    }
+
+    button {
+        width: 60px;
+        height: 63px;
+        font-family: "PT Sans", sans-serif;
+
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 18px;
+        color: #956D84;
+        cursor: pointer;
+        border: none;
+
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #956D84;
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .cake_single_main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cake_single_right {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    .cake_single_left_img {
+        max-width: 90%;
+        height: auto;
+    }
+}

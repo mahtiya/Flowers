@@ -1,9 +1,9 @@
-.single_page {
+.product_single_page {
     padding: 60px 20px;
     background-color: #fff;
 }
 
-.single_main {
+.product_single_main {
     display: flex;
     gap: 60px;
     justify-content: center;
@@ -11,13 +11,13 @@
     flex-wrap: wrap;
 }
 
-.single_left {
+.product_single_left {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .single_left_img {
+    .product_single_left_img {
         width: 100%;
         max-width: 580px;
         height: 580px;
@@ -33,7 +33,7 @@
     }
 }
 
-.single_right {
+.product_single_right {
     flex: 1;
     max-width: 700px;
     height: 580px;
@@ -41,12 +41,9 @@
     flex-direction: column;
     gap: 20px;
     padding: 30px;
-    // background: linear-gradient(135deg, #fff0f5, #fcd6e7);
-    // border-radius: 25px;
-    // box-shadow: 0 12px 35px rgba(149, 109, 132, 0.15);
 }
 
-.single_title {
+.product_single_title {
     font-family: "PT Sans", sans-serif;
     font-size: 36px;
     font-weight: 700;
@@ -54,7 +51,7 @@
     line-height: 1.2;
 }
 
-.single_price {
+.product_single_price {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -75,7 +72,7 @@
     }
 }
 
-.single_list {
+.product_single_list {
     display: flex;
     gap: 23px;
 
@@ -86,8 +83,8 @@
     }
 }
 
-.single_size,
-.single_materials {
+.product_single_size,
+.product_single_materials {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -99,7 +96,7 @@
     }
 }
 
-.single_rating {
+.product_single_rating {
     display: flex;
     gap: 5px;
     font-size: 24px;
@@ -116,7 +113,7 @@
     }
 }
 
-.single_description {
+.product_single_description {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -130,13 +127,13 @@
     }
 }
 
-.single_btn {
+.product_single_btn {
     margin-top: 20px;
     display: flex;
     gap: 30px;
 }
 
-.single_count {
+.product_single_count {
     display: flex;
     align-items: center;
     height: 63px;
@@ -152,13 +149,13 @@
         line-height: 18px;
     }
 
-    .btn_1 {
+    .product_btn_1 {
         border-right: 2px solid #956D84;
         border-radius: 6px 0px 0px 6px;
     }
 
-    
-    .btn_2 {
+
+    .product_btn_2 {
         border-left: 2px solid #956D84;
         border-radius: 0px 6px 6px 0px;
     }
@@ -189,17 +186,17 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .single_main {
+    .product_single_main {
         flex-direction: column;
         align-items: center;
     }
 
-    .single_right {
+    .product_single_right {
         max-width: 90%;
         padding: 25px;
     }
 
-    .single_left_img {
+    .product_single_left_img {
         max-width: 90%;
         height: auto;
     }

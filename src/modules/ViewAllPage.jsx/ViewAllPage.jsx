@@ -6,6 +6,9 @@ import ProductItem from '../../components/ProductItem/ProductItem';
 
 export default function ViewAllPage() {
     const [products, setProducts] = useState([])
+    const [present, setPresent] = useState([])
+    const [cakes, setCakes] = useState([])
+
     const [filter, setFilter] = useState("all")
     const [currentPage, setCurrentPage] = useState(1)
     const itemsPerPage = 6
@@ -14,17 +17,43 @@ export default function ViewAllPage() {
         fetch('https://687d6750918b64224331bd88.mockapi.io/products')
             .then(res => res.json())
             .then(data => setProducts(data))
-            .catch(err => console.error('Ошибка загрузки:', err))
+            .catch(err => console.error('Ошибка загрузки products:', err))
+    }, [])
+
+    useEffect(() => {
+        fetch('https://687d6750918b64224331bd88.mockapi.io/present')
+            .then(res => res.json())
+            .then(data => setPresent(data))
+            .catch(err => console.error('Ошибка загрузки present:', err))
+    }, [])
+
+    useEffect(() => {
+        fetch('https://687d6750918b64224331bd88.mockapi.io/cakes')
+            .then(res => res.json())
+            .then(data => setCakes(data)) // тут исправила
+            .catch(err => console.error('Ошибка загрузки cakes:', err))
     }, [])
 
     const filteredProducts = products.filter(item => {
         if (filter === "all") return true
-        return item.category === filter || item.flowers?.includes(filter) || item.toyType === filter
+        return item.category === filter || item.flowers?.includes(filter)
     })
 
-    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage)
+    const filteredPresent = present.filter(item => {
+        if (filter === "all") return true
+        return item.category === filter || item.plush?.includes(filter)
+    })
+
+    const filteredCakes = cakes.filter(item => {
+        if (filter === "all") return true
+        return item.category === filter || item.cakeType?.includes(filter)
+    })
+
+    const allItems = [...filteredProducts, ...filteredPresent, ...filteredCakes]
+
+    const totalPages = Math.ceil(allItems.length / itemsPerPage)
     const startIndex = (currentPage - 1) * itemsPerPage
-    const currentProducts = filteredProducts.slice(startIndex, startIndex + itemsPerPage)
+    const currentProducts = allItems.slice(startIndex, startIndex + itemsPerPage)
 
     const filters = [
         { value: "all", label: "Все" },

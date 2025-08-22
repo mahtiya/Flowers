@@ -3,6 +3,7 @@ import ViewBtn from "../../../../components/ui/ViewBtn"
 import Marquee from "react-fast-marquee"
 import './../../../../assets/scss/components/home/cake.scss'
 import ProductItem from "../../../../components/ProductItem/ProductItem"
+import CakeItem from "../../../../components/CakeItem/CakeItem"
 
 export default function Cake() {
     const [cake, setCake] = useState([])
@@ -31,7 +32,7 @@ export default function Cake() {
                     pauseOnHover={true}
                 >
                     {cake.map((cake, index) => (
-                        <ProductItem item={cake} key={index} />
+                        <CakeItem item={cake} key={index} />
                     ))}
                 </Marquee>
             </ul>

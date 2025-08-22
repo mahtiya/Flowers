@@ -3,7 +3,8 @@ import HeaderSearch from './HeaderSearch/HeaderSearch';
 import './../../assets/scss/components/header/header.scss';
 import HeaderList from './HeaderList/HeaderList';
 import Design from './../../assets/icons/design_right.svg'
-
+import { Link } from 'react-router-dom';
+import { BsCart4 } from "react-icons/bs";
 
 export default function Header() {
   return (
@@ -11,7 +12,9 @@ export default function Header() {
       <div className="container">
         <div className="header_block">
           <div className="header_img">
-            <img className='header_img' src={HeaderLogo} alt="" />
+            <Link to={"/"}>
+              <img className='header_img' src={HeaderLogo} alt="" />
+            </Link>
           </div>
           <div className="header_team">
             <div className="head_search">
@@ -21,6 +24,11 @@ export default function Header() {
               <HeaderList />
             </div>
           </div>
+          <Link to={"/cart"} className='header_right'>
+            <button className='header_cart'><BsCart4 className='icon' />
+              <div className='count'>3</div>
+            </button>
+          </Link>
         </div>
       </div>
       <div className="header_design">

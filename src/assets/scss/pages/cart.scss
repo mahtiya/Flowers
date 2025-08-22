@@ -1,0 +1,216 @@
+.cart {
+    .cart_title {
+        font-family: "PT Sans", sans-serif;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 18px;
+        text-align: center;
+        color: #333333;
+        padding: 15px 0px;
+        margin-bottom: 60px;
+    }
+
+    .cart_wrapper {
+        display: flex;
+        align-items: start;
+        gap: 25px;
+    }
+
+    .cart_table {
+        width: 100%;
+
+        tr {
+            display: grid;
+            grid-template-columns: 130px 3fr 2fr 120px 2fr 1fr;
+            gap: 35px;
+
+            th:nth-child(2) {
+                text-align: start;
+            }
+
+            th {
+                margin-bottom: 10px;
+                font-family: "PT Sans", sans-serif;
+                text-align: center;
+                color: #BDBDBD;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+
+        tbody {
+            tr {
+                display: grid;
+                grid-template-columns: 130px 3fr 2fr 120px 2fr 1fr;
+                align-items: center;
+                gap: 35px;
+                border: 1px solid #956D84;
+                height: 155px;
+
+                img {
+                    width: 100%;
+                    height: 155px;
+                    object-fit: cover;
+                    object-position: top center;
+                }
+
+                td:nth-child(2) {
+                    font-family: "PT Sans", sans-serif;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #333333;
+                }
+
+                td:nth-child(3) {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1px;
+
+                    .price {
+                        font-family: "PT Sans", sans-serif;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 18px;
+                        color: #333333;
+                    }
+
+                    .old_price {
+                        font-family: "PT Sans", sans-serif;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: #BDBDBD;
+                    }
+                }
+
+                td:nth-child(4) {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .counts {
+                    display: flex;
+                    align-items: center;
+                    width: 114px;
+                    height: 42px;
+                    border: 1px solid #956D84;
+
+                    p {
+                        text-align: center;
+                        width: 30px;
+                        font-family: "PT Sans", sans-serif;
+                        font-weight: 400;
+                        font-size: 19px;
+                        line-height: 18px;
+                    }
+
+                    button {
+                        width: 42px;
+                        height: 42px;
+                        font-size: 24px;
+                        line-height: 18px;
+                        color: #956D84;
+                        cursor: pointer;
+                        border: none;
+                        transition: all 0.3s ease;
+                        background: transparent;
+
+                        &:hover {
+                            background: #956d840c;
+                        }
+                    }
+                }
+
+                td:nth-child(5) {
+                    text-align: center;
+                    font-family: "PT Sans", sans-serif;
+                    font-weight: 900;
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: #333333;
+                }
+
+
+                td:nth-child(6) {
+                    padding-left: 15px;
+                    color: #956D84;
+                    font-size: 25px
+                }
+            }
+        }
+    }
+
+    .cart_general {
+        min-width: 415px;
+        margin-top: 31px;
+        border: 1px solid #956D84;
+        padding: 50px 60px 30px 60px;
+
+        h4 {
+            font-family: "PT Sans", sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 18px;
+            color: #956D84;
+        }
+
+        .cart_order {
+            margin: 50px 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            li {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .category {
+                    font-family: "PT Sans", sans-serif;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #BDBDBD;
+                }
+
+                .price {
+                    font-family: "PT Sans", sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #333333;
+                }
+
+
+            }
+
+
+        }
+
+        .sum_total_all {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+
+            .all {
+                font-family: "PT Sans", sans-serif;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 18px;
+                color: #333333a5;
+            }
+
+            .sum {
+                font-family: "PT Sans", sans-serif;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 18px;
+                color: #333333;
+            }
+        }
+    }
+}

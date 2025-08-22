@@ -1,5 +1,7 @@
 
 import About from '../modules/About/About'
+import CakeSinglePage from '../modules/CakeSinglePage/CakeSinglePage'
+import Cart from '../modules/Cart/Cart'
 import Comments from '../modules/Comments/Comments'
 import Contacts from '../modules/Contacts/Contacts'
 import DeliveryPay from '../modules/DeliveryPay/DeliveryPay'
@@ -8,7 +10,8 @@ import Forums from '../modules/Forums/Forums'
 import Home from '../modules/Home/Home'
 import Information from '../modules/Information/Information'
 import News from '../modules/News/News'
-import SinglePage from '../modules/SinglePage/SinglePage'
+import PresentSinglePage from '../modules/PresentSinglePage/PresentSinglePage'
+import ProductSinglePage from '../modules/ProductSinglePage/ProductSinglePage'
 import ViewAllPage from '../modules/ViewAllPage.jsx/ViewAllPage'
 import Notes from './../modules/Notes/Notes'
 
@@ -58,12 +61,27 @@ export const routes = () => {
         }, {
             id: 11,
             path: '/product/:id',
-            element: <SinglePage />
+            element: <ProductSinglePage />
         },
         {
             id: 12,
             path: '/about',
             element: <About />
         },
+        {
+            id: 13,
+            path: '/cart',
+            element: <Cart />
+        },
+        {
+            id: 14,
+            path: '/present/:id',
+            element: <PresentSinglePage />
+        },
+        {
+            id: 15,
+            path: '/cake/:id',
+            element: <CakeSinglePage />
+        }
     ]
 }
